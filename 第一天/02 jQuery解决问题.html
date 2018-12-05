@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.11.1.js"></script>
+	<style>
+		 * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            height: 200px;
+            background: pink;
+            margin-bottom: 10px;
+            display: none;
+        }
+	</style>
+</head>
+<body>
+	<button>我是按钮</button>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>
+<script>
+	/*jquery的入口函数*/
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("div").html("我是内容");
+			$("div").show(1000);
+		})
+		
+	})
+	/* jquery可以有两个入口函数*/
+	$(function(){
+		alert(11)
+	})
+</script>

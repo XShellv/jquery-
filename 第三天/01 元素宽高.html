@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #demo {
+            position: relative;
+            width: 300px;
+            height: 100px;
+            background-color: red;
+            padding: 20px;
+            border: 2px solid #000;
+        }
+        #box{
+            position: absolute;
+            left: 100px;
+            top:150px;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            //height()
+            console.log($("#demo").height())
+            //innerHeight()
+            console.log($("#demo").innerHeight())
+            //outerHeight
+            console.log($("#demo").outerHeight())
+            //设置高度
+            $("#demo").height(200)
+
+            //offset相对文档位置
+            console.log($("#box").offset(),$("#box").offset().left,$("#box").offset().top)
+            //设置位置后变成相对定位
+//            $("#box").offset({left:150,top:150})
+
+            //获取相对父元素位置
+            console.log($("#box").position())
+
+        })
+
+    </script>
+</head>
+<body>
+<div id="demo">
+    <div id="box"></div>
+</div>
+</body>
+</html>

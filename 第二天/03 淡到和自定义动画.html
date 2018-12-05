@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.js"></script>
+</head>
+<body>
+    <button>fadeTo</button>
+    <button>fadeToggle</button>
+    <button>animate</button>
+    <div id="box"></div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("#box").css({
+            "background":"red",
+            "position":"absolute"
+//            "display":"none"
+        })
+        $("*").css({
+            "margin":0,
+            "padding":0
+        })
+
+
+        $("button").eq(0).click (function () {
+//        alert(22)
+            $("#box").fadeTo(1000,.5);
+        })
+
+        $("button:eq(1)").click (function () {
+//        alert(22)
+            $("#box").fadeToggle();
+        })
+        $("button:last").click (function () {
+//        alert(22)
+            $("#box").animate({
+                "width":"1000px",
+                "height":"1000px",
+                "opacity":"0.3",
+                "left":"1000px"
+            },3000
+            );
+        })
+    })
+</script>

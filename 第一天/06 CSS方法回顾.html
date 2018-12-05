@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li {
+            font-size: 20px;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 设置多个样式，字典
+            $("li").css({
+                "background":"red",
+                "font-size":"12px"
+            })
+            // 根据我们的要求来设置，比如字大小按照index变化
+            $("li").css("font-size",function(index,value){ //形参
+                if(index == 2){
+                     return parseInt(value)*index + "px";
+                }
+               
+
+            })
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>我是li元素</li>
+    <li>我是li元素</li>
+    <li>我是li元素</li>
+    <li>我是li元素</li>
+</ul>
+</body>
+</html>

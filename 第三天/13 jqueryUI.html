@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jQueryUI/jquery-ui.min.css">
+    <script src="jquery-1.11.1.js"></script>
+    <script src="jQueryUI/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $(".tab").tabs()
+
+            $("#btn").click(function () {
+                $("#dialog").dialog()
+            })
+        })
+    </script>
+</head>
+<body>
+<div class = tab>
+    <ul>
+        <li><a href="#div1">页签1</a></li>
+        <li><a href="#div2">页签2</a></li>
+        <li><a href="#div3">页签3</a></li>
+    </ul>
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+</div>
+<button id="btn">打开对话框</button>
+<div id="dialog" title="对话框">撒发发发就发健身卡发货卡刷卡房间啊</div>
+</body>
+</html>

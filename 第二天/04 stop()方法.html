@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>开始</button>
+    <button>停止</button>
+    <div class="box"></div>
+</body>
+</html>
+<script src="jquery-1.11.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".box").css({
+            "width":"100px",
+            "height":"100px",
+            "background":"skyblue"
+        })
+        $("button:first").click(function () {
+            $(".box").animate({"height":"400px"},3000)
+                    .animate({"width":"400px"},3000)
+                    .animate({"height":"200px"},3000)
+                    .animate({"width":"200px"},3000)
+        })
+        $("button:last").click(function () {
+            $(".box").stop(true,true)
+        })
+    })
+</script>

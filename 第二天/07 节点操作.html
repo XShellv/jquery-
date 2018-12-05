@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    我用来做克隆用
+    <span>我是克隆的span</span>
+</div>
+<ul>
+    <li>兄弟很多01</li>
+    <li>兄弟很多02</li>
+    <li>兄弟很多03</li>
+    <li>兄弟很多04</li>
+    <li>兄弟很多05</li>
+</ul>
+<button>克隆btn</button>
+</body>
+</html>
+<script src="jquery-1.11.1.js"></script>
+<script>
+    $(function () {
+        //append
+        $("ul").append("<li>我是append追加的兄弟</li>");
+        //appendTo
+        $("<li>我是appendTo追加的兄弟</li>").appendTo($("ul"));
+
+        //prepend
+        $("ul").prepend("<li>我是prepend追加的兄弟")
+        //prependTo
+        $("<li>我是prependTo追加的兄弟</li>").prependTo($("ul"));
+
+        //after
+        $("ul").after("<li>我是after方法得到的兄弟")
+        //before
+        $("ul").before("<li>我是before方法得到的兄弟")
+
+        //insertAfter
+        $("<li>我是insertAfter方法得到的兄弟</li>").insertAfter($("ul"))
+        //insertBefore
+        $("<li>我是insertBefore方法得到的兄弟</li>").insertBefore($("ul"))
+
+        //wrap
+//        $("li").wrap("<div>我用来包裹li</div>")
+        //wrapAll
+//        $("li").wrapAll("<div>我用来包裹li</div>")
+
+//        replaceWith
+//        $("li").replaceWith($("div"))
+        //replaceAll
+        $("div").replaceAll($("li"))
+
+        //empty
+//        $("li").empty();//消灭子节点
+        //remove
+//        $("li").remove()//消灭自己
+
+//        clone
+//        $("button").click(function () {
+//           $(this).clone(true).insertBefore($(this))
+//        })
+
+    })
+</script>

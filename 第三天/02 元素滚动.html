@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            overflow: scroll;
+            border: 1px solid #000;
+        }
+        p{
+            width: 400px;
+            height: 400px;
+
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("input").on("click",function () {
+                var left = $("#box").scrollLeft();
+                var top = $("#box").scrollTop();
+
+                $("#box").scrollLeft(10+left).scrollTop(10+top);
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <input type="button" value="滚动+10">
+    <div id="box">
+        <p>我是文本 传智播客 http://www.itcast.cn </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <script src="jquery-1.11.1.js"></script>
+    <style></style>
+</head>
+<body>
+    <button id="old">.trigger("focus")</button>
+    <button id="new">.triggerHandler("focus")</button><br/><br/>
+    <input type="text" value="To Be Focused"/>
+
+    <ul>
+        <li>兄弟元素01</li>
+        <li>兄弟元素02</li>
+        <li>兄弟元素03</li>
+        <li>兄弟元素04</li>
+        <li>兄弟元素05</li>
+    </ul>
+<script>
+    $(function () {
+        //trigger和triggerHandler
+//    $("#old").click(function(){
+//        $("input").trigger("focus");
+//    });
+//    $("#new").click(function(){
+//        $("input").triggerHandler("focus");
+//    });
+//    $("input").focus(function(){
+//        $("<span>Focused!</span>").appendTo("body").fadeOut(5000);
+//    });
+
+        //on
+//        $("#old").on("click mouseenter",{data:"我是被传进来的数据"},function(event) {
+//            $("input").focus()
+//            console.log(event.data.data)
+//        })
+//      //off
+//        $("#old").off("mouseenter")
+
+        //bind
+//        $("#new").bind("click mouseleave",function () {
+//            $("input").select()
+//        })
+//
+//        $("#old").bind({
+//            click:function () {
+//                console.log(("click事件"))
+//            },
+//            mouseenter:function () {
+//                console.log("mouseenter事件")
+//            }
+//        })
+        //unbind
+//        $("#old").unbind("mouseenter")
+
+        //one触发一次
+//        $("#old").one("click",function () {
+//            console.log("我只能显示一次")
+//        })
+
+        //delegate
+        $("ul").delegate("li","click mouseenter",function () {
+            console.log($(this).html())
+        })
+        //undelegate
+        $("ul").undelegate("click")
+    })
+
+</script>
+
+</body>
+</html>

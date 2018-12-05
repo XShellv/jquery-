@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li {
+            float: left;
+            font-size: 40px;
+            color: darkgreen;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            var wjx_none = '☆', wjx_sel  = '★';
+            $("div>ul>li").text(wjx_none)
+                    .mouseenter(function () {
+                        $(this).text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none)
+                    }).click(function () {
+                        $(this).addClass("clicked").siblings().removeClass("clicked")
+                    })
+                    .mouseleave(function () {
+                        $("div>ul>li").text(wjx_none)
+                        $(".clicked").text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none)
+
+                    })
+
+            $("li").click(function () {
+                //在对象上存储数据
+                $(this).data("clicked",true)
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+<div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>

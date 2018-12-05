@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            height: 200px;
+            background: #000;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // DOM 转化为jquery
+            var btn = document.getElementById('btn')
+            $(btn).click(function(){
+                $("div").hide()
+            })
+            // jquery转化为dom
+            $("button")[1].onclick = function(){
+               alert("jQuery对象转换成dom对象");
+            }
+        });
+    </script>
+</head>
+<body>
+    <button id="btn">我是阿牛</button>
+    <button>我是阿妹</button>
+    <div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li {
+            /*color: red;*/
+            font-size: 18px;
+        }
+    </style>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // id选择器设置属性
+            $("#b03").css("background","#000");
+            // 获取属性
+            var fontSize = $("li").css("font-size");
+            console.log(fontSize);
+            // 类选择器
+            $(".liItem").css("background","red");
+            // 标签选择器
+            $("li").css("opacity","0.8");
+            // 通配符选择器
+            $("*").css("font-size","20px");
+            // 并集选择器
+            $("li,div").css("background","green");
+            // 交集选择器
+            $("li#b03").css("font-size","50px"); 
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li class="liItem aa" id="demo">兄弟很多1</li>
+    <li>兄弟很多2</li>
+    <li id="b03">兄弟很多3</li>
+    <li>兄弟很多4</li>
+    <li class="liItem">兄弟很多5</li>
+    <li id="demo1">兄弟很多6</li>
+    <li>兄弟很多7</li>
+    <li class="liItem">兄弟很多8</li>
+</ul>
+
+<div class="aa">
+    我是div的内容
+</div>
+</body>
+</html>

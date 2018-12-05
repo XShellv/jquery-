@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            background-color: #ccc;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("p").hover(function () {
+                $(this).toggleClass("active")
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>你好啊</p>
+</body>
+</html>

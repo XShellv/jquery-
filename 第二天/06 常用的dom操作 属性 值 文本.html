@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用的dom操作 属性 值 文本</title>
+</head>
+<body>
+    <input type="button" value="设置属性">
+    <input type="button" value="获取属性">
+    <input type="text">
+    <input type="button" value="属性值为回调函数">
+    <input type="button" value="删除属性">
+    <input type="button" value="设置div中的html">
+    <input type="button" value="获取div中的html">
+    <input type="button" value="设置div中的text">
+    <input type="button" value="获取div中的text">
+    <div></div>
+    <div></div>
+</body>
+</html>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+    $(function () {
+        //attr
+        $("input:first").click(function () {
+            $("input:eq(2)").attr("value","我是设置属性")
+        });
+
+        $("input:eq(1)").click(function () {
+            console.log($(this).attr("value"));
+            $(this).attr("value",function (index) {
+                return "我的index值为"+$(this).index();
+            })
+        })
+
+        $("input:eq(3)").click(function () {
+            $(this).attr("value",function (index) {
+                return "我的index值为"+$(this).index();
+            })
+        })
+    });
+    //remove attr
+    $("input:eq(5)").click(function () {
+        $("div").html("<p>我是p元素</p>")
+    })
+    //获取html
+//    $("input:eq(6)").click(function () {
+//        console.log($("div").html())
+//    })
+    //设置text
+    $("input:eq(7)").click(function () {
+        $("p:first").text("我是被设置text的p元素")
+    })
+    //获取text
+    $("input:eq(8)").click(function () {
+        console.log($("div").text())
+    })
+</script>

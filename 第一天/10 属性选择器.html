@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 属性选择器,带有属性的a标签
+            // $("a[href]").css("color","red")
+
+            // [attr=value]
+            // $("a[href = 'www.baidu.com']").css("color","red")
+
+            // [attr!=value] 属性不为www.baidu.com的所有a标签
+            // $("a[href != 'www.baidu.com']").css("color","red")
+
+            // [attr^=value]
+            // $("a[href ^= 'www").css("color","red")
+            // [attr$=value]
+            // $("a[href $= 'cn").css("color","red")
+
+            // [attr*=value] 包含
+            $("a[href][title *= 容]").css("color","red")
+            // [attr][attr] 都满足 交集
+        });
+    </script>
+</head>
+<body>
+    <div class="divItem">
+        <a href="www.baidu.com" title="谁啊？">百度</a>
+        <a href="http://web.itcast.cn" title="我是title的内容">前端移动</a>
+        <a href="http://sina.com.cn">新浪</a>
+        <a>我没有href</a>
+        <P>哈哈</P>
+    </div>
+</body>
+</html>
